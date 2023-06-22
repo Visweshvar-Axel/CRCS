@@ -15,15 +15,25 @@ var investmentData = [
       datasets: [{
         label: 'Reward',
         data: investmentData.map(data => data.reward),
-        backgroundColor: '#007bff',
-        hoverBackgroundColor: '#0056b3',
+        backgroundColor: [
+          'rgba(205, 127, 50, 0.7)',   // Bronze
+          'rgba(192, 192, 192, 0.7)',  // Silver
+          'rgba(255, 215, 0, 0.7)',    // Gold
+          'rgba(229, 228, 226, 0.7)'   // Platinum
+        ],
+        hoverBackgroundColor: [
+          'rgba(205, 127, 50, 1)',     // Bronze (hover)
+          'rgba(192, 192, 192, 1)',    // Silver (hover)
+          'rgba(255, 215, 0, 1)',      // Gold (hover)
+          'rgba(229, 228, 226, 1)'     // Platinum (hover)
+        ],
         borderWidth: 0
       }]
     },
     options: {
       animation: {
-        duration: 1000, // Animation duration in milliseconds
-        easing: 'easeOutQuart' // Animation easing function
+        duration: 1000,               // Animation duration in milliseconds
+        easing: 'easeOutQuart'       // Animation easing function
       },
       scales: {
         yAxes: [{
@@ -46,8 +56,8 @@ var investmentData = [
   
     // Update chart animation
     investmentChart.update({
-      duration: 1000, // Animation duration in milliseconds
-      easing: 'easeOutQuart' // Animation easing function
+      duration: 1000,               // Animation duration in milliseconds
+      easing: 'easeOutQuart'       // Animation easing function
     });
   }
   
