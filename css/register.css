@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: "Inter" !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    line-height: 17px;
+  
+    letter-spacing: 0.5px;
+  }
+  
+  .sign-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #212529;
+    height: 100%;
+    width: 100%;
+  }
+  .welcome {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .sign-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "sign-sentence sign-area";
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    width: min(900px, 90%);
+    height: 550px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px -8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  .sign-sentence {
+    grid-area: sign-sentence;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+      background-color: #6ab2be;
+    line-height: 30px;
+    background-position: center;
+    color: white;
+    background-image: url(../img/sign-up-art.jpg);
+    background-size: 400px;
+    background-repeat: no-repeat;
+  }
+  .sign-area {
+    grid-area: sign-area;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    padding: 5% 75px;
+    grid-template-areas:
+      "header"
+      "input-wrapper";
+  }
+  
+
+  .input-wrapper {
+    grid-area: input-wrapper;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .password-wrapper {
+    grid-area: password-wrapper;
+  }
+  
+  .header {
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: header;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  label,
+  button {
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  button {
+    padding: 7px;
+  }
+  button {
+    margin-top: 30px;
+    border-radius: 34px;
+    padding: 10px;
+  }
+  .email-input {
+    grid-area: email-input;
+  }
+  .password-input {
+    grid-area: password-input;
+  }
+  .sign-btn {
+    grid-area: sign-btn;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+  }
+  
+  .sign-btn:active {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  input {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  input:focus {
+    outline: 0;
+    border-bottom: 2px solid #6767fd;
+  }
+  .background-image {
+    background-image: none;
+  }
+  
+  .social-network {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    font-size: 25px;
+    color: #6767fd;
+  }
+  
+  .social-network > * {
+    cursor: pointer;
+  }
+  
+  .sign-up-wrapper {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+  }
+  .sign-up-btn {
+    color: blueviolet;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 680px) {
+    .sign-wrapper {
+      width: 100% !important;
+      height: 100%;
+      grid-template-columns: 1fr !important;
+      grid-template-rows: 100vh 100vh;
+      grid-template-areas: "sign-sentence" "sign-area";
+      overflow: auto;
+    }
+  }
+  input[type=number]::-webkit-inner-spin-button, 
+  input[type=number]::-webkit-outer-spin-button { 
+         appearance: none;
+      margin: 0; 
+      Display:none;
+  }
+  

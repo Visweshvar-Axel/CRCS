@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Page</title>
+    <style>
+        /* Popup styles */
+        .popup {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 500px;
+          padding: 20px;
+          background: rgb(255, 255, 255);
+          /* background: rgb(13,136,76); */
+          /* background: linear-gradient(90deg, rgba(13,136,76,1) 0%, rgba(15,201,115,1) 52%, rgba(15,201,115,1) 100%, rgba(13,136,76,1) 192%); */
+          border: 1px solid #cccccc;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          display: none;
+          /* color: white; */
+        }
+    
+        /* Close button styles */
+        .close {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          font-weight: bold;
+          color: #aaa;
+          cursor: pointer;
+        }
+    
+        /* Profile icon styles */
+        .profile-icon {
+          position: fixed;
+          top: 10px;
+          right: 10px;
+          font-size: 24px;
+          color: #333;
+          cursor: pointer;
+        }
+        .pop-prof-mar{
+            margin-left: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <!-- Profile icon -->
+      <div class="profile-icon"><img src="img/user.png" alt="profile-icon" height="30px" width="30px"></div>
+    
+      <!-- Popup -->
+      <div class="popup" id="myPopup">
+        <span class="close">&times;</span>
+        <h1>Profile</h1>
+        <hr>
+        <div class="pop-prof-mar">
+            <img src="img/user.png" alt="profile-icon" height="50px" width="50px">
+            <h3>Society id</h3>
+            <p>123326123</p>
+            <hr>
+            <h3>Location</h3>
+            <p>Tamil Nadu Multi State Societies Cooperative Housing Federation Ltd.,TAMIL NADU</p>
+            <hr>
+            <h3>Application number</h3>
+            <p>6445JBALM65</p>
+            <hr>
+        </div>
+      </div>
+    
+      <script>
+        // Get the elements
+        const profileIcon = document.querySelector('.profile-icon');
+        const popup = document.querySelector('.popup');
+        const closeBtn = document.querySelector('.close');
+    
+        // Show the popup when profile icon is clicked
+        profileIcon.addEventListener('click', function() {
+          popup.style.display = 'block';
+        });
+    
+        // Close the popup when close button is clicked
+        closeBtn.addEventListener('click', function() {
+          popup.style.display = 'none';
+        });
+      </script>
+</body>
+</html>
